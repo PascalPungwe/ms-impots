@@ -1,24 +1,22 @@
 on:
-  push:
+  push:    
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Déploiement du projet"
+      - run: echo "deploiement projet ms-declaration-impots"
   build-project:
     runs-on: ubuntu-latest
     steps:
-      - name: Cloner le projet
-        uses: actions/checkout@v4
+      - name: build project
+        uses: actions/checkout@v2
       - name: version de Java
-        uses: action/setup-java@v4
+        uses: actions/setup-java@v2
         with:
-          distribution: 'temurin'
+          distribution : 'temurin'
           java-version: '21'
-
       - name: générer le livrable
         run: |
           ls -al
           ./mvnw clean package spring-boot:repackage -Dmaven.test.skip=true
           ls -al target
-

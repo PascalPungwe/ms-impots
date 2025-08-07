@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cloner le projet
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       - name: version de Java
-        uses: action/setup-java@v4
+        uses: action/setup-java@v2
         with:
           distribution: 'temurin'
           java-version: '21'

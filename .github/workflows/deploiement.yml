@@ -12,7 +12,7 @@ jobs:
       - name: Cloner le projet
         uses: actions/checkout@v4
       - name: version de Java
-        uses: action/setup-java@
+        uses: action/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'

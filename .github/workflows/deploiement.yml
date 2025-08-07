@@ -17,9 +17,9 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-        name: générer le livrable
+      - name: générer le livrable
         run: |
-            ls -al
-            ./mvnw clean-package spring-boot:repackage -Dmaven.test.skip=true
-            ls -al target
+          ls -al
+          ./mvnw clean-package spring-boot:repackage -Dmaven.test.skip=true
+          ls -al target
 
